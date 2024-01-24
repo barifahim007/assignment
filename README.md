@@ -15,3 +15,46 @@
 - [x] winston setup
 - [x] Databse connect
 - [x] Mongoose setup
+
+                  ## project requirment analyssis
+
+## Requirement analysis of our project:
+
+                      #user authentication ..
+
+- [x] userId
+- [x] Name
+- [x] 1.FirstName
+- [x] 2.middleName
+- [x] 3.lastName
+- [x] email
+- [x] user password
+- [x] contact
+- [x] gender
+- [x] date of birth
+- [x] Created at
+- [x] Updated at
+
+                    ## Sports item data:
+
+- [x] productId:
+- [x] productName
+- [x] price:
+- [x] quantity
+- [x] brand
+- [x] size
+- [x] priceRange
+- [x] material
+- [x] colour
+- [x] condition
+- [x] created at
+- [x] updated at
+
+                    ##  Sales History
+
+- [x] salesId
+- [x] productId
+- [x] userId
+- [x] userName
+- [x] productName
+- [x] quantitySold | date
