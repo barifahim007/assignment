@@ -1,13 +1,11 @@
-import { Request, Response } from 'express'
+import { NextFunction, Request, Response } from 'express'
 import { userService } from './user.service'
 
-const createUser = async (req: Request, res: Response) => {
+const createUser = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const { ...user } = req.body
-    console.log(user)
     const result = await userService.createUser(user)
-
-    // console.log(result)
+    console.log(result)
 
     res.status(200).json({
       success: true,
@@ -15,10 +13,11 @@ const createUser = async (req: Request, res: Response) => {
       data: result
     })
   } catch (error) {
-    res.status(400).json({
-      succes: false,
-      massage: 'user not create'
-    })
+    // res.status(400).json({
+    //   succes: false,
+    //   massage: 'user not create'
+    // })
+    next(error)
     // console.log(error)
   }
 }

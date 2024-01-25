@@ -10,6 +10,4 @@ export type IUser = {
   contact: string
   gender: string
   dateOfBirth: string
-  CreatedAt?: string
-  Updatedat?: string
 }

@@ -8,6 +8,7 @@ const handelGlobalError: ErrorRequestHandler = (error, req, res, next) => {
   let statusCode = 400
   let message = 'something went wrong'
   let errorMessage: IGenericErrorMessage[] = []
+  console.log('hey I am from global error handler', error)
 
   if (error?.name === 'ValidationError') {
     const simpifiedError = handelValidationError(error)
