@@ -1,6 +1,6 @@
 import express, { Application, Request, Response } from 'express'
 import cors from 'cors'
-// import router from './app/modules/users/user.route'
+import router from './app/modules/users/user.route'
 import handelGlobalError from './midelware/handelGlobalError/handelGlobalError'
 
 const app: Application = express()
@@ -9,7 +9,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 // application router
-// app.use('/api/v1/user', router)
+app.use('/api/v1/user', router)
 
 // global error handeler
 app.use(handelGlobalError)

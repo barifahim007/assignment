@@ -36,10 +36,10 @@ async function main() {
 }
 main()
 // SIGTERM process....
-process.on('SIGTERM', () => {
-  logger.inforLogger.info('sigterm caught')
-  if (server) {
-    server.close()
-  }
-})
+// process.on('SIGTERM', () => {
+//   logger.inforLogger.info('sigterm caught')
+//   if (server) {
+//     server.close()
+//   }
+// })
 // console.log(MRX)
